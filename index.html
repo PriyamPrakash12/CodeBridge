@@ -1,74 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="homestyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
+    />
+    <title>CodeBridge</title>
+  </head>
+
+  <body>
+    <section class="header">
+      <nav>
+        <a href="Main.html"><img src="" /></a>
+        <div class="nav-links" id="NavLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="Tutorials.html">TUTORIALS</a></li>
+            <li><a href="About.html">ABOUT</a></li>
+            <li><a href="Contact.html">CONTACT</a></li>
+            <li><a href="">SignIn or SignUp</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="Main_Text">
+        <h1>CodeBridge</h1>
+        <p>Welcome to CodeBridge<br />Step toward Learning</p>
+      </div>
+
+    </section>
+
+    <footer>
+        <hr />
+        <p>Author: Priyam Prakash</p>
+        <p>&copy; 2025 CodeBridge. All rights reserved.</p>
+      </footer>
+      
+    
+    <script>
+        const navLinks = document.getElementById("NavLinks");
+        function showMenu() {
+          navLinks.style.right = "0";
+        }
+        function hideMenu() {
+          navLinks.style.right = "-200px";
+        }
         
-        <title>CodeBridge</title>
-        <style>
-            body {
-                font-family: 'Times New Roman', Times, serif;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            header {
-                background-color: rgb(42, 161, 141);
-                padding: 20px;
-                text-align: center;
-                color: white;
-            }
-            nav {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: rgb(230, 230, 230);
-                padding: 10px 0;
-            }
-            nav a {
-                margin: 0 15px;
-                text-decoration: none;
-                color: rgb(16, 6, 54);
-                font-weight: bold;
-            }
-            nav button {
-                margin-left: 15px;
-                padding: 8px 16px;
-                font-size: 14px;
-                background-color: rgb(42, 161, 141);
-                color: white;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-                font-weight: bold;
-            }
-            nav button:hover {
-                background-color: rgb(16, 6, 54);
-            }
-            footer {
-                margin: 5px 0c;
-                color: rgb(42, 42,42);
-                text-align: center;
-            }
-        </style>
-    </head>
+    </script>
 
-    <body>
-        <header>
-            <h1>CodeBridge</h1>
-            <p>Welcome to CodeBridge</p>
-        </header>
-            <nav>
-            <a href="Tutorials.html">TUTORIALS</a>
-            <a href="About.html">ABOUT</a>
-            <a href="Contact.html">CONTACT</a>
-            <button oneclick="">SignIn or SignUp</button>   
-            </nav>
-
-        <footer>
-            <hr>
-            <p>Author: Priyam Prakash</p>
-            <p>&copy;Copyright reserved.</p>
-        </footer>
-    </body>
+  </body>
 </html>
