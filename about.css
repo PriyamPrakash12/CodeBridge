@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+                font-family: 'Times New Roman', Times, serif;
+                margin: 30px;
+                text-align: justify;
+                color:rgb(1, 253, 253);
+                background-image: url(Photos/Firefly\ abstract\ web\ design\ coding\ theme\ 0.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+
+header h1 {
+                font-family: 'Times New Roman', Times, serif;
+                text-align: center;
+                color: aliceblue;
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+
+p {
+                background-color: rgba(20, 24, 32, 0.6);
+                padding: 15px;
+                border-radius: 8px;
+                color: rgb(240, 255, 255);
+            }
+
+@media (max-width: 768px) {
+    body {
+        margin: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
