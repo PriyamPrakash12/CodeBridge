@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="homestyles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
     <title>CodeBridge</title>
   </head>
 
@@ -16,37 +14,53 @@
       <nav>
         <a href="Main.html"><img src="" /></a>
         <div class="nav-links" id="NavLinks">
-          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <i class="fa fa-times" onclick="hideMenu()" aria-label="Close menu"></i>
           <ul>
             <li><a href="Tutorials.html">TUTORIALS</a></li>
             <li><a href="About.html">ABOUT</a></li>
             <li><a href="Contact.html">CONTACT</a></li>
+            <li><a href="Blogs.html">BLOGS</a></li>
             <li><a href="">SignIn or SignUp</a></li>
           </ul>
         </div>
-        <i class="fa fa-bars" onclick="showMenu()"></i>
+        <i class="fa fa-bars" onclick="showMenu()" aria-label="Open Menu"></i>
       </nav>
+
       <div class="Main_Text">
         <h1>CodeBridge</h1>
         <p>Welcome to CodeBridge<br />Step toward Learning</p>
       </div>
+    </section>
 
+    <section class="about-section">
+      <h1>ABOUT</h1>
+      <p>
+        Java is a programming language and computing platform first released by
+        Sun Microsystems in 1995.<br />
+        It has evolved from humble beginnings to power a large share of today’s
+        digital world, by providing the reliable platform upon which many
+        services and applications are built. New, innovative products and
+        digital services designed for the future continue to rely on Java, as
+        well. While most modern Java applications combine the Java runtime and
+        application together, there are still many applications and even some
+        websites that will not function unless you have a desktop Java
+        installed.
+      </p>
     </section>
 
     <footer>
         <hr />
         <p>Author: Priyam Prakash</p>
         <p>&copy; 2025 CodeBridge. All rights reserved.</p>
-      </footer>
-      
+      </footer>     
     
     <script>
-        const navLinks = document.getElementById("NavLinks");
+        var navLinks = document.getElementById("NavLinks");
         function showMenu() {
-          navLinks.style.right = "0";
+          navLinks.classList.add("show");
         }
         function hideMenu() {
-          navLinks.style.right = "-200px";
+          navLinks.classList.remove("show");
         }
         
     </script>
