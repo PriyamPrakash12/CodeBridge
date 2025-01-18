@@ -24,7 +24,7 @@ body {
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: url("Photos/firefly.jpg");
+    background-image: url("firefly.jpg");
     background-position: center;
     background-size: cover;
     position: relative;
