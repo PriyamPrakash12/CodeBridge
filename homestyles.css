@@ -1,4 +1,3 @@
-/* Global Reset and Variables */
 :root {
     --primary-color: #f44336;
     --secondary-color: #d68376;
@@ -25,7 +24,7 @@ body {
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: url("Photos/Firefly abstract web design coding theme 0.jpg");
+    background-image: url("Firefly abstract web design coding theme 0.jpg");
     background-position: center;
     background-size: cover;
     position: relative;
