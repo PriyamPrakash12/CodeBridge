@@ -8,7 +8,120 @@ body {
                 font-family: 'Times New Roman', Times, serif;
                 margin: 30px;
                 text-align: justify;
+                color:rgb(1, 253, 253);*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+            body {
+                font-family: 'Poppins', san-serif;
+                margin: 0;
+                text-align: justify;
                 color:rgb(1, 253, 253);
+                background-image: url(Photos/firefly.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+
+            header h1 {
+                text-align: center;
+                color: aliceblue;
+                font-size: 36px;
+                margin-bottom: 20px;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+                animation: fadeIn 2s ease-in;
+            }
+
+
+            nav ul {
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                padding: 10px 0;
+            }
+            
+            nav ul li {
+                margin: 0 15px;
+            }
+            
+            nav ul li a {
+                text-decoration: none;
+                color: aliceblue;
+                font-size: 18px;
+                transition: color 0.3s, transform 0.3s;
+            }
+            
+            nav ul li a:hover {
+                color: #f44336;
+                transform: scale(1.1);
+            }
+
+            main.content {
+                max-width: 800px;
+                margin: 20px auto;
+                padding:20px;
+            }
+
+            p {
+                font-family: 'Merriweather', serif;
+                background-color: rgba(20, 24, 32, 0.6);
+                padding: 15px;
+                border-radius: 8px;
+                color: rgb(240, 255, 255);
+                font-size: 15px;
+                line-height: 1.6;
+
+            }
+            
+            footer {
+                text-align: center;
+                padding: 15px 0;
+                background-color: rgba(0, 0, 0, 0.8);
+                color: rgb(240, 255, 255);
+                width: 100%;
+                margin-top: auto;
+                box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+            }
+            
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+
+@media (max-width: 768px) {
+    body {
+        margin: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+        padding: 10px;
+    }
+    footer {
+        font-size: 12px;
+        padding: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
                 background-image: url(/CodeBridge/firefly.jpg);
                 background-repeat: no-repeat;
                 background-size: cover;
