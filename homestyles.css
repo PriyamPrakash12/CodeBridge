@@ -1,6 +1,7 @@
+/* Global Reset and Variables */
 :root {
     --primary-color: #f44336;
-    --secondary-color: #d68376;
+    --secondary-color: #352c2b;
     --background-color: #07559e;
     --light-bg-color: #ccb7b6;
     --text-color: aliceblue;
@@ -17,14 +18,14 @@
 
 body {
     margin: 0;
-    overflow-x: hidden; 
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Header Section */
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: url("/CodeBridge/firefly.jpg");
+    background-image: url("Photos/firefly.jpg");
     background-position: center;
     background-size: cover;
     position: relative;
