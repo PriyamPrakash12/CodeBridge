@@ -11,11 +11,34 @@
                 font-family: 'Times New Roman', Times, serif;
                 font-size: medium;
                 font-weight: 500;
-                background-image: url(/CodeBridge/firefly.jpg);
+                background-image: url(Photos/firefly.jpg);
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-attachment: fixed;
                 color: aliceblue;
+            }
+
+            nav ul {
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                padding: 10px 0;
+            }
+            
+            nav ul li {
+                margin: 0 15px;
+            }
+            
+            nav ul li a {
+                text-decoration: none;
+                color: aliceblue;
+                font-size: 18px;
+                transition: color 0.3s, transform 0.3s;
+            }
+            
+            nav ul li a:hover {
+                color: #f44336;
+                transform: scale(1.1);
             }
 
             button {
@@ -31,10 +54,44 @@
             button:hover {
                 background-color: #45a049;
             }
+
+            @media (max-width: 768px) {
+                body {
+                    margin: 15px;
+                }
+            
+                header h1 {
+                    font-size: 24px;
+                }
+            
+                p {
+                    font-size: 14px;
+                    padding: 10px;
+                }
+                footer {
+                    font-size: 12px;
+                    padding: 10px 0;
+                }
+            
+                nav ul li a {
+                    font-size: 14px;
+                }
+            }
         </style>
+
     </head>
     <body>
         <h1>Details</h1>
         
+        <nav>
+            <ul>
+                <li><a href="Main.html">HOME</a></li>
+                <li><a href="Tutorials.html">TUTORIALS</a></li>
+                <li><a href="About.html">ABOUT US</a></li>
+                <li><a href="Blogs.html">BLOGS</a></li>
+               
+            </ul>
+        </nav>
+
     </body>
 </html>
