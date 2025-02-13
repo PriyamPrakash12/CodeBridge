@@ -1,50 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        
-        <title>JAVA TUTORIALS</title>
-        <style>
-            body {
-                
-                text-align: center;
-                font-family: 'Times New Roman', Times, serif;
-                font-size: medium;
-                color: aliceblue;
-                font-weight: 500;
-                background-image: url(/CodeBridge/firefly.jpg);
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-attachment: fixed;
-            }
-
-            button {
-                margin: 10px;
-                padding: 10px 20px;
-                font-size: 18px;
-                background-color: #4caf50;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-            button:hover {
-                background-color: #45a049;
-            }
-        </style>
+        <title>COURSES | CodeBridge</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="tutorials.css">
     </head>
 
     <body>
-        <h1>Select Your Learning Level</h1>
-        <button onclick="">BASIC</button>
-        <button onclick="">INTERMEDIATE</button>
-        <button onclick="">ADVANCE</button>
+        <header>
+            <h1>COURSES</h1>
+        </header>
 
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="">SignIn or SignUp</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="box">
+                <span>JAVA</span>
+                <button onclick="">BASIC</button>
+                <button onclick="">INTERMEDIATE</button>
+                <button onclick="">ADVANCE</button>
+            </div>
+        </div>
         <script>
             function navigateTo(page) {
                 window.location.href = page;
             }
         </script>
+
+        <footer>
+            <hr />
+            <p>Author: Priyam Prakash</p>
+            <p>&copy; 2025 CodeBridge. All rights reserved.</p>
+        </footer>
     </body>
 </html>
