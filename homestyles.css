@@ -2,12 +2,12 @@
 :root {
     --primary-color: #f44336;
     --secondary-color: #352c2b;
-    --background-color: #07559e;
+    --background-color: #ffffff;
     --light-bg-color: #ccb7b6;
     --text-color: aliceblue;
     --shadow-color: rgba(0, 0, 0, 0.3);
     --hover-bg-color: #9e2b23;
-    --header-font: 'Arial', sans-serif;
+    --header-font: 'Poppins', sans-serif;
 }
 
 * {
@@ -15,17 +15,26 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+   
 body {
+    font-family: var(---header-font);
+    color: var(--text-color);
+    background: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin: 0;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+
 }
 
 /* Header Section */
 .header {
     min-height: 100vh;
     width: 100%;
-   background-image: url(/CodeBridge/firefly.jpg);
+    background-image: url(/CodeBridge/firefly.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -46,17 +55,17 @@ nav img {
 .nav-links {
     flex: 1;
     text-align: right;
-}
-
-.nav-links ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
     position: relative;
 }
 
-.nav-links ul li + li {
-    margin-left: 20px;
+.nav-links ul {
+    list-style: none;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
 }
 
 .nav-links ul li a {
@@ -72,63 +81,13 @@ nav img {
     color: var(--primary-color);
 }
 
-.nav-links ul li::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: var(--primary-color);
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-
-.nav-links ul li:hover::after {
-    width: 100%;
-}
-
-/* About Section */
-.about-section {
-    padding: clamp(30px, 5vw, 50px);
-    background-color: rgba(7, 85, 158, 0.8);
+.menu-open, .menu-close {
+    background: none;
+    border: none;
+    font-size: 22px;
     color: var(--text-color);
-    text-align: center;
-    border-radius: 10px;
-    margin: 30px auto;
-    box-shadow: 0 4px 8px var(--shadow-color);
-    max-width: 90%;
-}
-
-.about-section h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.about-section p {
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.about-section .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    color: var(--text-color);
-    background-color: var(--light-bg-color);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: 0.3s;
-    box-shadow: 0 4px 6px var(--shadow-color);
-}
-
-.about-section .btn:hover,
-.about-section .btn:focus {
-    background-color: var(--hover-bg-color);
-    box-shadow: 0 4px 8px rgba(214, 85, 85, 0.3);
+    cursor: pointer;
+    display: none;
 }
 
 /* Main Text */
@@ -151,6 +110,32 @@ nav img {
     font-size: 20px;
 }
 
+/* About Section */
+.about-section {
+    padding: clamp(30px, 5vw, 50px);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--text-color);
+    text-align: center;
+    border-radius: 10px;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    max-width: 90%;
+}
+
+.about-section h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -158,71 +143,72 @@ footer {
     background-color: rgba(0, 0, 0, 0.8);
     color: var(--text-color);
     width: 100%;
-    position: relative;
     box-shadow: 0 -2px 5px var(--shadow-color);
-}
-
-/* Navigation Icon for Mobile */
-nav .fa {
-    display: none;
 }
 
 /* Mobile View */
 @media (max-width: 700px) {
-    .Main_Text h1 {
-        font-size: 50px;
-    }
-
-    .nav-links ul li {
+    @media (max-width: 700px) {
+        .Main_Text h1 {
+            font-size: 50px;
+        }
+    
+        .nav-links ul li {
+            display: block;
+        }
+    
+        .nav-links {
+            visibility: hidden;
+            position: absolute;
+            background: var(--secondary-color);
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right: 0;
+            text-align: left;
+            z-index: 2;
+            transition: transform 0.5s ease-in-out, visibility 0s linear 0.5s;
+            transform: translateX(100%);
+        }
+    
+        .nav-links.show {
+            visibility: visible;
+            transform: translateX(0);
+            transition: transform 0.5s ease-in-out, visibility 0s linear 0s;
+        }
+    
+        nav .fa {
+            display: block;
+            color: var(--text-color);
+            margin: 10px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+    
+        .nav-links ul {
+            padding: 20px;
+        }
+    
+        .about-section {
+            padding: 30px 5%;
+        }
+    
+        .about-section h1 {
+            font-size: 30px;
+        }
+    
+        .about-section p {
+            font-size: 16px;
+        }
+    
+        .about-section .btn {
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+    
+    .menu-open,.menu-close {
         display: block;
-    }
-
-    .nav-links {
-        visibility: hidden;
-        position: absolute;
-        background: var(--secondary-color);
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: 0;
-        text-align: left;
-        z-index: 2;
-        transition: transform 0.5s ease-in-out, visibility 0s linear 0.5s;
-        transform: translateX(100%);
-    }
-
-    .nav-links.show {
-        visibility: visible;
-        transform: translateX(0);
-        transition: transform 0.5s ease-in-out, visibility 0s linear 0s;
-    }
-
-    nav .fa {
-        display: block;
-        color: var(--text-color);
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-
-    .nav-links ul {
-        padding: 20px;
-    }
-
-    .about-section {
-        padding: 30px 5%;
-    }
-
-    .about-section h1 {
-        font-size: 30px;
-    }
-
-    .about-section p {
-        font-size: 16px;
-    }
-
-    .about-section .btn {
-        padding: 8px 15px;
-        font-size: 14px;
+        justify-content: center;
+        }
     }
 }
