@@ -1,0 +1,137 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+                
+body {
+    font-family: 'Poppins', sans-serif;
+    color: aliceblue;
+    background-image: url(/CodeBridge/firefly.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: justify; 
+}
+
+header h1 {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
+            
+nav ul li {
+    margin: 0 15px;
+}
+            
+nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 18px;
+
+}
+            
+nav ul li a:hover {
+    color: #0bd437;
+    transform: scale(1.1);
+}            
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    padding: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    gap: 15px;
+}
+
+.box span {
+    font-weight: bold;
+    font-size: 20px;
+    color:aliceblue;
+}
+
+button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #012c01;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 200px;
+}
+           
+button:hover {
+    background-color: #355305;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(240, 255, 255);
+    width: 100%;
+    margin-top: auto;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+@media (max-width: 768px) {
+    body {
+        margin: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .box {
+        margin-top: 15px;
+        width: 90%;
+    }
+    
+    button {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px 0;
+    }
+}
+                background-color: #45a049;
+            }
