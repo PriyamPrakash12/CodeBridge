@@ -1,29 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lan="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeBridge</title>
     <link rel="stylesheet" href="homestyles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <title>CodeBridge</title>
+
   </head>
 
   <body>
     <section class="header">
       <nav>
-        <a href="Main.html"><img src="" /></a>
+        <a href="Main.html">
+          <img src="" />
+        </a>
+        
         <div class="nav-links" id="NavLinks">
-          <i class="fa fa-times" onclick="hideMenu()" aria-label="Close menu"></i>
+          <button class="menu-close" onclick="hideMenu()" aria-label="Close menu"
+          <i class="fa fa-times"></i>
+          </button>
           <ul>
-            <li><a href="Tutorials.html">TUTORIALS</a></li>
+            <li><a href="Tutorials.html">COURSES</a></li>
             <li><a href="About.html">ABOUT</a></li>
-            <li><a href="Contact.html">CONTACT</a></li>
-            <li><a href="Blogs.html">BLOGS</a></li>
+           <!-- <li><a href="Contact.html">CONTACT</a></li>
+            <li><a href="Blogs.html">BLOGS</a></li>-->
             <li><a href="">SignIn or SignUp</a></li>
           </ul>
         </div>
-        <i class="fa fa-bars" onclick="showMenu()" aria-label="Open Menu"></i>
+        <button class="menu-open" onclick="showMenu()" aria-label="Open Menu">
+          <i class="fa fa-bars"></i>
+        </button>      
       </nav>
 
       <div class="Main_Text">
@@ -55,15 +64,13 @@
       </footer>     
     
     <script>
-        var navLinks = document.getElementById("NavLinks");
+        const navLinks = document.getElementById("NavLinks");
         function showMenu() {
           navLinks.classList.add("show");
         }
         function hideMenu() {
           navLinks.classList.remove("show");
         }
-        
     </script>
-
   </body>
 </html>
